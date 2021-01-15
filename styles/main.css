@@ -255,7 +255,7 @@ body.lock {
     .nav {
         width: 100%;
         align-items: center;
-        padding: 100px 0px 25px 0px;
+        padding: 80px 0px 20px 0px;
         text-align: center;
         top: -100%;
         left: 0;
@@ -270,7 +270,7 @@ body.lock {
     }
 
     .nav__link {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .nav__list li {
