@@ -1,5 +1,0 @@
-greyish black - #0f0f0f
-black - #040404
-greyish white - #f4f4f4
-white - #fbfbfb
-red - #a60000
