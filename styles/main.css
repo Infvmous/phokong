@@ -193,8 +193,7 @@ body.lock {
     display: flex;
     flex-direction: column;
     justify-content: bottom;
-    padding: 0px 0px 10px 0px;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 20px 0px;
 }
 
 .contacts .contact__number {
@@ -256,7 +255,7 @@ body.lock {
     .nav {
         width: 100%;
         align-items: center;
-        padding: 130px 0px 25px 0px;
+        padding: 100px 0px 25px 0px;
         text-align: center;
         top: -100%;
         left: 0;
