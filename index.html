@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
-        <div class="main">
+        <div class="wrapper">
             <!-- header -->
             <header class="header">
                 <div class="container">
@@ -16,6 +16,7 @@
                         <div id="burger" class="header__burger">
                             <span></span>
                         </div>
+
                         <!-- navbar -->
                         <nav id="nav" class="nav">
                             <ul class="nav__list">
@@ -67,10 +68,12 @@
                                 >
                             </div>
                         </nav>
+
                         <!-- Logo -->
                         <a href="#" class="header__logo">
                             <img src="images/logo.png" alt="" />
                         </a>
+
                         <!-- contacts -->
                         <span class="contact__number dark"
                             >+7 999 468 0777</span
@@ -79,12 +82,55 @@
                 </div>
             </header>
 
-            <!-- cover -->
-            <section class="cover">
-                <!-- <button class="menu">Перейти в меню</button>
-                <p>Вкуснее уже не будет - лучший Фо Бо в Новосибирске!</p>
-                <p>Вокзальная магистраль, 1</p> -->
-            </section>
+            <main class="main">
+                <!-- cover -->
+                <section class="cover">
+                    <p>Вкуснее уже не будет - лучший Фо Бо в Новосибирске!</p>
+                    <button class="menu__scroll" id="scroll-to-menu">
+                        Заказать
+                    </button>
+                    <img
+                        id="reveal-content"
+                        src="images/icons/down-arrow.svg"
+                        alt=""
+                    />
+                </section>
+
+                <!-- why us? -->
+                <section class="about">
+                    <h1>Почему мы?</h1>
+                    <div class="about__card">
+                        <span>1</span>
+                        <div class="about__card__body">
+                            <h2>Традиции</h2>
+                            <p>
+                                Наши повара - коренные вьетнамцы, которые
+                                готовят по традиционным рецептам
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__card">
+                        <span>2</span>
+                        <div class="about__card__body">
+                            <h2>Внимание</h2>
+                            <p>
+                                Мы всегда следим за качеством продуктов и
+                                закупаем овощи с фруктами каждое утро
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__card">
+                        <span>3</span>
+                        <div class="about__card__body">
+                            <h2>Доверие</h2>
+                            <p>
+                                9 из 10 людей , попробовавших наш Фо Бо ,
+                                становятся постоянными посетителями
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <script src="scripts/main.js"></script>

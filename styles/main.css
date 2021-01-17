@@ -15,6 +15,11 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html,
@@ -25,7 +30,7 @@ body {
 }
 
 body.lock {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .main {
@@ -54,14 +59,20 @@ body.lock {
     height: 100%;
     background-color: var(--grayish-white);
     z-index: 2;
+    opacity: 0.7;
 }
 
 .header__body {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     height: 80px;
     align-items: center;
+}
+
+.header__body > *:last-child {
+    white-space: nowrap;
+    text-align: right;
 }
 
 /* BURGER MENU */
@@ -80,7 +91,7 @@ body.lock {
     width: 100%;
     height: 2px;
     top: 9px;
-    transition: all 0.5s ease 0s;
+    transition: all 0.45s ease 0s;
 }
 
 .header__burger:before,
@@ -91,7 +102,7 @@ body.lock {
     width: 100%;
     height: 2px;
     left: 0;
-    transition: all 0.5s ease 0s;
+    transition: all 0.45s ease 0s;
 }
 
 .header__burger:before {
@@ -123,12 +134,13 @@ body.lock {
     width: auto;
     height: 100%;
     background-color: var(--grayish-black);
-    padding: 150px 100px 25px 50px;
+    padding: 150px 80px 25px 70px;
     transition: all 0.7s ease 0s;
     overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 0.9;
 }
 
 .nav a {
@@ -167,6 +179,9 @@ body.lock {
 
 .header__logo {
     position: relative;
+    margin: 0 auto;
+    /* or */
+    text-align: center;
     z-index: 3;
 }
 
@@ -222,6 +237,22 @@ body.lock {
 }
 
 /* cover */
+.menu__scroll {
+    padding: 10px 40px 10px 40px;
+    background-color: transparent;
+    outline: 0;
+    border: 2px solid var(--logo-red);
+    border-radius: 40px;
+    font-size: 20px;
+    color: var(--grayish-white);
+    transition: all 0.2s ease 0s;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+.menu__scroll:hover {
+    background-color: var(--logo-red);
+}
 
 .cover {
     width: 100%;
@@ -235,6 +266,34 @@ body.lock {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.cover p {
+    color: var(--grayish-white);
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 30;
+    margin: 10px 25px;
+}
+
+.cover h1 {
+    font-size: 40px;
+    color: var(--grayish-white);
+}
+
+.cover img {
+    width: 48px;
+    position: absolute;
+    bottom: 0;
+    margin: 15px 0;
+}
+
+.cover img:hover {
+    cursor: pointer;
+}
+
+main {
+    height: 9999px;
 }
 
 /* Media queries */
@@ -259,6 +318,7 @@ body.lock {
         text-align: center;
         top: -100%;
         left: 0;
+        opacity: 1;
     }
 
     .nav.active {
@@ -284,18 +344,22 @@ body.lock {
     .contact__number.dark {
         font-size: 16px;
     }
+
+    body.lock {
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width: 575px) {
-    .header__logo {
-        margin: 0 auto;
-    }
-
     .contact__number.dark {
         display: none;
     }
 
-    .header__body {
-        justify-content: space-between;
+    .cover p {
+        text-align: center;
+    }
+
+    .menu__scroll {
+        margin: 10px;
     }
 }
