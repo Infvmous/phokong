@@ -1,9 +1,3 @@
-function addScrollEventListener(ele, scrollTo, scrollDuration = 500) {
-    ele.addEventListener('click', () => {
-        smoothScroll(scrollTo, scrollDuration);
-    });
-}
-
 function addScrollEventListener(ele, scrollTo) {
     ele.addEventListener('click', () => {
         scrollTo.scrollIntoView({ behavior: 'smooth' });
